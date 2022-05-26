@@ -1,0 +1,44 @@
+CHECKOVERDRAFT ALT
+private boolean checkOverdraft(double amt, String account) {
+        //your code here
+        if (account.equals(CHECKING)) {
+            if (amt > checkBalance) {
+                System.out.println("overdrafted");
+                return true;
+            }
+            if (amt > savingBalance) {
+                System.out.println("overdrafted");
+                return true;
+            } else if (amt < savingBalance) {
+                System.out.println("no overdraft");
+                return false;
+            } else if (amt < checkBalance) {
+                System.out.println("no overdraft");
+                return false;
+            }
+            else{
+                System.out.println("error");
+            }
+        }
+        if (account.equals(SAVING)) {
+            if (amt > checkBalance) {
+                System.out.println("overdrafted");
+                return true;
+            }
+            if (amt > savingBalance) {
+                System.out.println("overdrafted");
+                return true;
+            } else if (amt < savingBalance) {
+                System.out.println("no overdraft");
+                return false;
+            } else if (amt < checkBalance) {
+                System.out.println("no overdraft");
+                return false;
+            }
+            else{
+                System.out.println("error");
+            }
+        }
+        System.out.println("no overdraft");
+        return false;   //false = no overdraft
+    }
